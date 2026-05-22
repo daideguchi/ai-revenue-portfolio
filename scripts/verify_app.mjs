@@ -73,9 +73,39 @@ try {
   }
 
   await page.getByRole("button", { name: "日本語" }).click();
-  await page.getByText("人間が決める。AIが進める。", { exact: false }).waitFor();
+  await page.getByText("人間が決める。", { exact: false }).waitFor();
+  await page.getByText("公開した作品", { exact: false }).waitFor();
 
-  await page.getByRole("button", { name: "Hackathon lanes" }).click();
+  const japaneseText = await page.locator("body").innerText();
+  const bannedJapaneseModeText = [
+    "AI Product Portfolio",
+    "Human-AI products",
+    "Featured",
+    "Shipped Products",
+    "View products",
+    "public product lanes",
+    "working demos",
+    "submitted Devpost project",
+    "Hackathon lanes",
+    "Evidence-first",
+    "Submitted",
+    "Ready package",
+    "Submit window locked",
+    "Proof stage",
+    "Live app",
+    "Operating system",
+    "Agent Work Needs a Control Room",
+    "Not Just Screenshots",
+    "What this portfolio proves",
+    "Back to top"
+  ];
+  for (const text of bannedJapaneseModeText) {
+    if (japaneseText.includes(text)) {
+      throw new Error(`english text still visible in Japanese mode: ${text}`);
+    }
+  }
+
+  await page.getByRole("button", { name: "ハッカソン" }).click();
   const filterState = await page.locator(".project-card").evaluateAll((projectCards) => ({
     visible: projectCards.filter((card) => !card.hidden).length,
     hidden: projectCards.filter((card) => card.hidden).length
@@ -84,7 +114,7 @@ try {
     throw new Error(`expected hackathon filter to show 6 and hide 6, got ${JSON.stringify(filterState)}`);
   }
 
-  await page.getByRole("button", { name: "All" }).click();
+  await page.getByRole("button", { name: "すべて" }).click();
   const screenshotName = externalUrl ? "portfolio-vercel-full.png" : "portfolio-full.png";
   await page.screenshot({ path: join(root, "media", screenshotName), fullPage: true });
   console.log(`portfolio_verify_ok url=${targetUrl} cards=${cardCount} loaded_images=${imageCount} screenshot=media/${screenshotName}`);

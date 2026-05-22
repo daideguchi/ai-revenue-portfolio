@@ -20,6 +20,12 @@ Public repository:
 https://github.com/daideguchi/ai-revenue-portfolio
 ```
 
+## 日本語でひとことで
+
+これは、DDがAIと作った公開作品を一枚で見られるページです。
+
+何を作ったのか、誰の役に立つのか、どこまで確認できているのか、公開サイトやGitHubがどこにあるのかをまとめています。
+
 ## What This Is
 
 This is a simple review hub for products built through a human-AI collaboration workflow.
