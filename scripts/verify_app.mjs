@@ -70,11 +70,15 @@ try {
   await page.getByText("人間が決める。AIが進める。", { exact: false }).waitFor();
 
   await page.getByRole("button", { name: "Hackathon lanes" }).click();
-  const visibleCards = await page.locator(".project-card:visible").count();
-  if (visibleCards < 5) {
-    throw new Error(`expected hackathon filter to show at least 5 cards, got ${visibleCards}`);
+  const filterState = await page.locator(".project-card").evaluateAll((projectCards) => ({
+    visible: projectCards.filter((card) => !card.hidden).length,
+    hidden: projectCards.filter((card) => card.hidden).length
+  }));
+  if (filterState.visible !== 6 || filterState.hidden !== 6) {
+    throw new Error(`expected hackathon filter to show 6 and hide 6, got ${JSON.stringify(filterState)}`);
   }
 
+  await page.getByRole("button", { name: "All" }).click();
   await page.screenshot({ path: join(root, "media", "portfolio-full.png"), fullPage: true });
   console.log(`portfolio_verify_ok cards=${cardCount} loaded_images=${imageCount} screenshot=media/portfolio-full.png`);
 } finally {

@@ -39,6 +39,10 @@ img {
   max-width: 100%;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 button,
 a.button {
   min-height: 42px;

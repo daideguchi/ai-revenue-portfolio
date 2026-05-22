@@ -112,7 +112,7 @@ The verifier checks:
 - at least 10 project cards exist
 - at least 10 screenshots load
 - Japanese mode works
-- the hackathon filter works
+- the hackathon filter shows 6 cards and hides 6 cards
 - a fresh `media/portfolio-full.png` screenshot is generated
 
 ## Claim Boundary
