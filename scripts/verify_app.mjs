@@ -46,6 +46,8 @@ try {
     "AI作品集",
     "人間が決める。",
     "このページは、DDのAI作品を見る入口です。",
+    "30秒レビュー手順",
+    "忙しい人は、この順番で見てください。",
     "まず全体を見る",
     "公開ページを開く",
     "確認できるものを見る",
@@ -103,6 +105,8 @@ try {
   const requiredEnglishText = [
     "Human decides. AI ships.",
     "This page is the front door to DD's AI work.",
+    "30-second review path",
+    "If you are busy, review in this order.",
     "Understand the whole picture",
     "Open the live page",
     "Check the proof",

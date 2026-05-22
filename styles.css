@@ -304,6 +304,42 @@ h3 {
   color: var(--muted);
 }
 
+.quick-review-panel {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.quick-review-panel h3,
+.quick-review-panel p {
+  margin-bottom: 0;
+}
+
+.quick-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.quick-steps article {
+  display: grid;
+  gap: 6px;
+  min-height: 124px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-muted);
+}
+
+.quick-steps span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .step-number {
   display: grid;
   width: 34px;
@@ -589,7 +625,8 @@ h3 {
 
   .guide-grid,
   .route-panel,
-  .route-links {
+  .route-links,
+  .quick-steps {
     grid-template-columns: 1fr;
   }
 
