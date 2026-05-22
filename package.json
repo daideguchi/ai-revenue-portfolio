@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "verify": "node scripts/verify_app.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
+  },
+  "devDependencies": {}
+}
