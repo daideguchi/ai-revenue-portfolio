@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
+const externalUrl = process.env.PORTFOLIO_VERIFY_URL;
 const mime = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
@@ -15,7 +16,7 @@ const mime = {
   ".webp": "image/webp"
 };
 
-const server = createServer(async (request, response) => {
+const server = externalUrl ? null : createServer(async (request, response) => {
   try {
     const requested = request.url === "/" ? "/index.html" : request.url;
     const filePath = join(root, decodeURIComponent(requested.split("?")[0]));
@@ -28,13 +29,18 @@ const server = createServer(async (request, response) => {
   }
 });
 
-await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
-const port = server.address().port;
+let targetUrl = externalUrl;
+if (!targetUrl) {
+  await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
+  const port = server.address().port;
+  targetUrl = `http://127.0.0.1:${port}/`;
+}
+
 const browser = await chromium.launch();
 
 try {
   const page = await browser.newPage({ viewport: { width: 1440, height: 1200 } });
-  await page.goto(`http://127.0.0.1:${port}/`, { waitUntil: "networkidle" });
+  await page.goto(targetUrl, { waitUntil: "networkidle" });
 
   const requiredText = [
     "Human decides. AI ships.",
@@ -79,9 +85,12 @@ try {
   }
 
   await page.getByRole("button", { name: "All" }).click();
-  await page.screenshot({ path: join(root, "media", "portfolio-full.png"), fullPage: true });
-  console.log(`portfolio_verify_ok cards=${cardCount} loaded_images=${imageCount} screenshot=media/portfolio-full.png`);
+  const screenshotName = externalUrl ? "portfolio-vercel-full.png" : "portfolio-full.png";
+  await page.screenshot({ path: join(root, "media", screenshotName), fullPage: true });
+  console.log(`portfolio_verify_ok url=${targetUrl} cards=${cardCount} loaded_images=${imageCount} screenshot=media/${screenshotName}`);
 } finally {
   await browser.close();
-  server.close();
+  if (server) {
+    server.close();
+  }
 }

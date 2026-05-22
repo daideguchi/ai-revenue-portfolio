@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "verify": "node scripts/verify_app.mjs"
+    "verify": "node scripts/verify_app.mjs",
+    "verify:vercel": "PORTFOLIO_VERIFY_URL=https://ai-revenue-portfolio.vercel.app node scripts/verify_app.mjs"
   },
   "dependencies": {
     "playwright": "^1.55.0"

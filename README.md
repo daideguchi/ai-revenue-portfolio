@@ -2,7 +2,13 @@
 
 A concise public portfolio for DD's human-AI product work.
 
-Live site:
+Primary Vercel site:
+
+```text
+https://ai-revenue-portfolio.vercel.app
+```
+
+GitHub Pages mirror:
 
 ```text
 https://daideguchi.github.io/ai-revenue-portfolio/
@@ -115,6 +121,18 @@ The verifier checks:
 - the hackathon filter shows 6 cards and hides 6 cards
 - a fresh `media/portfolio-full.png` screenshot is generated
 
+Verify the production Vercel deployment:
+
+```bash
+npm run verify:vercel
+```
+
+Expected result:
+
+```text
+portfolio_verify_ok url=https://ai-revenue-portfolio.vercel.app
+```
+
 ## Claim Boundary
 
 This portfolio intentionally avoids inflated claims.
@@ -124,6 +142,8 @@ It links to public apps, repositories, demos, screenshots, verifiers, and submis
 ## Main Links
 
 - GitHub profile: https://github.com/daideguchi
+- Primary Vercel site: https://ai-revenue-portfolio.vercel.app
+- GitHub Pages mirror: https://daideguchi.github.io/ai-revenue-portfolio/
 - Investor Diligence War Room: https://daideguchi.github.io/investor-diligence-war-room/
 - Shipyard Solver Lab: https://daideguchi.github.io/shipyard-solver-lab/
 - Live Web Evidence Agent: https://daideguchi.github.io/live-web-evidence-agent/
