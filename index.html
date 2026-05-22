@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="A concise portfolio of shipped human-AI products, hackathon submissions, public demos, and evidence-first agent workflows by DD."
+      content="DDがAIと作った公開作品を、公開サイト、GitHub、提出状況、確認結果まで一枚にまとめた作品集です。"
     >
-    <title>DD AI Product Portfolio</title>
+    <title>DD AI作品集</title>
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body data-lang="en">
+  <body data-lang="ja">
     <header class="site-header">
       <a class="brand" href="#top" aria-label="DD AI Product Portfolio">
         <span class="brand-mark" aria-hidden="true">DD</span>
@@ -21,6 +21,7 @@
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#guide" data-i18n="navGuide">Guide</a>
         <a href="#featured" data-i18n="navFeatured">Featured</a>
         <a href="#system" data-i18n="navSystem">System</a>
         <a href="#proof" data-i18n="navProof">Proof</a>
@@ -49,7 +50,8 @@
             </span>
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#featured" data-i18n="viewProducts">View products</a>
+            <a class="button primary" href="#guide" data-i18n="startHere">Start here</a>
+            <a class="button" href="#featured" data-i18n="viewProducts">View products</a>
             <a class="button" href="https://github.com/daideguchi" rel="noreferrer">GitHub</a>
           </div>
         </div>
@@ -81,6 +83,60 @@
         </p>
       </section>
 
+      <section id="guide" class="section guide-section" aria-label="Guide">
+        <div class="guide-copy">
+          <p class="eyebrow" data-i18n="guideEyebrow">Guide</p>
+          <h2 data-i18n="guideTitle">This page is the front door to DD's AI work.</h2>
+          <p>
+            <span class="i18n-en">
+              It is for people who want to quickly understand what DD can build, what is already public, and which links prove it.
+            </span>
+            <span class="i18n-ja">
+              これは、DDがAIと何を作れるのかをすぐ見るための入口です。作品、公開ページ、GitHub、提出状況、確認できることを一か所にまとめています。
+            </span>
+          </p>
+        </div>
+
+        <div class="guide-grid">
+          <article class="guide-card">
+            <span class="step-number">1</span>
+            <h3 data-i18n="guideOneTitle">Understand the whole picture</h3>
+            <p data-i18n="guideOneText">Start with the cards to see the kind of products DD builds with AI.</p>
+          </article>
+          <article class="guide-card">
+            <span class="step-number">2</span>
+            <h3 data-i18n="guideTwoTitle">Open the live page</h3>
+            <p data-i18n="guideTwoText">Use the live links to touch the actual product, not just read a description.</p>
+          </article>
+          <article class="guide-card">
+            <span class="step-number">3</span>
+            <h3 data-i18n="guideThreeTitle">Check the proof</h3>
+            <p data-i18n="guideThreeText">Each serious product points to code, screenshots, demo material, or verification notes.</p>
+          </article>
+        </div>
+
+        <div class="route-panel">
+          <div>
+            <p class="eyebrow" data-i18n="routeEyebrow">Choose by purpose</p>
+            <h3 data-i18n="routeTitle">If you are new, start here.</h3>
+          </div>
+          <div class="route-links">
+            <a href="#featured">
+              <strong data-i18n="routeProductsTitle">I want to see the products</strong>
+              <span data-i18n="routeProductsText">Open the main cards first.</span>
+            </a>
+            <a href="#proof">
+              <strong data-i18n="routeProofTitle">I want to check if this is real</strong>
+              <span data-i18n="routeProofText">Look at the proof and links.</span>
+            </a>
+            <a href="https://github.com/daideguchi" rel="noreferrer">
+              <strong data-i18n="routeGithubTitle">I want to see the code</strong>
+              <span data-i18n="routeGithubText">Go to GitHub.</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section id="featured" class="section">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="featuredEyebrow">Featured work</p>
@@ -100,7 +156,7 @@
 
         <div class="project-grid">
           <article class="project-card featured-card" data-category="hackathon evidence">
-            <img src="media/coexistence-console-ja-policy.png" alt="Coexistence Console Japanese policy editor screenshot" loading="lazy">
+            <img src="media/coexistence-console-ja-policy.png" alt="Coexistence Console Japanese policy editor screenshot" loading="eager">
             <div class="project-body">
               <div class="card-topline">
                 <span class="tag">Reddit / Devvit</span>
@@ -124,7 +180,7 @@
           </article>
 
           <article class="project-card featured-card" data-category="hackathon evidence">
-            <img src="media/investor-diligence-war-room-full.png" alt="Investor Diligence War Room dashboard screenshot" loading="lazy">
+            <img src="media/investor-diligence-war-room-full.png" alt="Investor Diligence War Room dashboard screenshot" loading="eager">
             <div class="project-body">
               <div class="card-topline">
                 <span class="tag" data-i18n="tagInvestor">Investor workflow</span>
@@ -149,7 +205,7 @@
           </article>
 
           <article class="project-card featured-card" data-category="hackathon evidence">
-            <img src="media/shipyard-solver-lab-full.png" alt="Shipyard Solver Lab dashboard screenshot" loading="lazy">
+            <img src="media/shipyard-solver-lab-full.png" alt="Shipyard Solver Lab dashboard screenshot" loading="eager">
             <div class="project-body">
               <div class="card-topline">
                 <span class="tag" data-i18n="tagOptimization">Optimization</span>
@@ -174,7 +230,7 @@
           </article>
 
           <article class="project-card" data-category="hackathon evidence agentops">
-            <img src="media/live-web-evidence-agent-full.png" alt="Live Web Evidence Agent screenshot" loading="lazy">
+            <img src="media/live-web-evidence-agent-full.png" alt="Live Web Evidence Agent screenshot" loading="eager">
             <div class="project-body">
               <div class="card-topline">
                 <span class="tag" data-i18n="tagWeb">Live web research</span>
@@ -199,7 +255,7 @@
           </article>
 
           <article class="project-card" data-category="hackathon evidence">
-            <img src="media/coexistence-impact-engine-full.png" alt="Coexistence Impact Engine screenshot" loading="lazy">
+            <img src="media/coexistence-impact-engine-full.png" alt="Coexistence Impact Engine screenshot" loading="eager">
             <div class="project-body">
               <div class="card-topline">
                 <span class="tag" data-i18n="tagCoexistence">AI coexistence</span>
@@ -223,7 +279,7 @@
           </article>
 
           <article class="project-card" data-category="hackathon agentops">
-            <img src="media/shiproom-os-pages-full.png" alt="Shiproom OS screenshot" loading="lazy">
+            <img src="media/shiproom-os-pages-full.png" alt="Shiproom OS screenshot" loading="eager">
             <div class="project-body">
               <div class="card-topline">
                 <span class="tag" data-i18n="tagLaunch">Launch system</span>
@@ -260,7 +316,7 @@
 
         <div class="project-grid compact-grid">
           <article class="project-card" data-category="agentops evidence">
-            <img src="media/resilient-agentops-gateway-pages-full.png" alt="Resilient AgentOps Gateway screenshot" loading="lazy">
+            <img src="media/resilient-agentops-gateway-pages-full.png" alt="Resilient AgentOps Gateway screenshot" loading="eager">
             <div class="project-body">
               <h3 data-i18n="gatewayTitle">Resilient AgentOps Gateway</h3>
               <p data-i18n="gatewayDesc">Visible model routing, fallback, risk, cost, approval gates, and handoff state for resilient AI workflows.</p>
@@ -272,7 +328,7 @@
           </article>
 
           <article class="project-card" data-category="agentops evidence">
-            <img src="media/agentops-flight-recorder-full.png" alt="AgentOps Flight Recorder dashboard screenshot" loading="lazy">
+            <img src="media/agentops-flight-recorder-full.png" alt="AgentOps Flight Recorder dashboard screenshot" loading="eager">
             <div class="project-body">
               <h3 data-i18n="recorderTitle">AgentOps Flight Recorder</h3>
               <p data-i18n="recorderDesc">A Splunk-ready black box for human-AI operations, with event timelines, risk signals, and replayable evidence.</p>
@@ -284,7 +340,7 @@
           </article>
 
           <article class="project-card" data-category="agentops evidence">
-            <img src="media/agentops-case-control-room-full.png" alt="AgentOps Case Control Room screenshot" loading="lazy">
+            <img src="media/agentops-case-control-room-full.png" alt="AgentOps Case Control Room screenshot" loading="eager">
             <div class="project-body">
               <h3 data-i18n="caseTitle">AgentOps Case Control Room</h3>
               <p data-i18n="caseDesc">Turns AI-agent work into a UiPath-style governed case with risk, robot work items, approval tasks, and handoff.</p>
@@ -296,7 +352,7 @@
           </article>
 
           <article class="project-card" data-category="agentops evidence">
-            <img src="media/gemini-operations-navigator-full.png" alt="Gemini Operations Navigator screenshot" loading="lazy">
+            <img src="media/gemini-operations-navigator-full.png" alt="Gemini Operations Navigator screenshot" loading="eager">
             <div class="project-body">
               <h3 data-i18n="geminiOpsTitle">Gemini Operations Navigator</h3>
               <p data-i18n="geminiOpsDesc">Gemini plus MCP-style support operations with tool traces, cost guardrails, and a human approval checkpoint.</p>
@@ -308,7 +364,7 @@
           </article>
 
           <article class="project-card" data-category="agentops evidence">
-            <img src="media/human-ai-handoff-copilot-full.png" alt="Human-AI Handoff Copilot architecture screenshot" loading="lazy">
+            <img src="media/human-ai-handoff-copilot-full.png" alt="Human-AI Handoff Copilot architecture screenshot" loading="eager">
             <div class="project-body">
               <h3 data-i18n="handoffTitle">Human-AI Handoff Copilot</h3>
               <p data-i18n="handoffDesc">A required-field handoff packet for support escalation, approval pauses, and next-human or next-agent resumption.</p>
@@ -320,7 +376,7 @@
           </article>
 
           <article class="project-card" data-category="agentops evidence">
-            <img src="media/evidence-locked-dfir-agent-full.png" alt="Evidence-Locked DFIR Agent report screenshot" loading="lazy">
+            <img src="media/evidence-locked-dfir-agent-full.png" alt="Evidence-Locked DFIR Agent report screenshot" loading="eager">
             <div class="project-body">
               <h3 data-i18n="dfirTitle">Evidence-Locked DFIR Agent</h3>
               <p data-i18n="dfirDesc">AI-assisted incident response where every claim cites evidence and unsupported certainty is blocked as a risk.</p>

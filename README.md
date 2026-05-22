@@ -1,157 +1,165 @@
-# DD AI Product Portfolio
+# DD AI作品集
 
-A concise public portfolio for DD's human-AI product work.
+DDがAIと一緒に作った公開作品をまとめた、メインの作品集です。
 
-Primary Vercel site:
+作品、公開ページ、GitHub、提出状況、確認できる証拠を一か所に置いています。
+
+## まず見るページ
+
+メインサイト:
 
 ```text
 https://ai-revenue-portfolio.vercel.app
 ```
 
-GitHub Pages mirror:
+GitHub Pages版:
 
 ```text
 https://daideguchi.github.io/ai-revenue-portfolio/
 ```
 
-Public repository:
+GitHubリポジトリ:
 
 ```text
 https://github.com/daideguchi/ai-revenue-portfolio
 ```
 
-## 日本語でひとことで
+## これは何か
 
-これは、DDがAIと作った公開作品を一枚で見られるページです。
+これは、DDがAIと何を作れるのかをすぐ見るための入口です。
 
-何を作ったのか、誰の役に立つのか、どこまで確認できているのか、公開サイトやGitHubがどこにあるのかをまとめています。
+ページでは、次のことが分かります。
 
-## What This Is
+- どんな作品を作っているか
+- 誰の役に立つものか
+- 実際に動く公開ページはどこか
+- GitHubや画像など、あとから確認できるものは何か
+- どの作品が提出済みで、どの作品が準備中か
 
-This is a simple review hub for products built through a human-AI collaboration workflow.
+## はじめて見る人へ
 
-The point is not to look busy. The point is to make the work understandable in 30 seconds:
+サイトは日本語が最初に表示されます。
 
-- what was built
-- who it helps
-- what proof exists
-- where the public demo lives
-- what is already submitted
-- what is queued for the next submission window
+迷ったら、上からこの順番で見てください。
 
-## Portfolio Thesis
+1. 「まず見る」で全体をつかむ
+2. 「公開した作品」で作品カードを見る
+3. 気になる作品の「公開サイト」や「GitHub」を開く
+4. 「見た目だけではありません」で確認できる証拠を見る
 
-```text
-Human decides. AI ships.
-```
+英語でも読みたい人は、画面右上の `EN` で切り替えできます。
 
-AI should do real work, but serious work needs evidence, boundaries, review, handoff, and visible human decision points.
-
-日本語:
+## 大事にしている考え
 
 ```text
 人間が決める。AIが進める。
 ```
 
-AIには実務を進めさせる。ただし、証拠・境界・レビュー・引き継ぎ・人間の判断点を必ず見える形に残す。
+AIには実務を進めさせる。ただし、証拠、ルール、人間の確認、引き継ぎを必ず残す。
 
-## Featured Products
+## 主な作品
 
-| Product | Status | Public proof |
+| 作品 | 状態 | 確認できること |
 | --- | --- | --- |
-| Coexistence Console | Submitted | Devvit app, Gemini policy drafts, Japanese UI |
-| Investor Diligence War Room | Submitted | Live app, Gemini proof, narrated demo, Devpost |
-| Shipyard Solver Lab | Ready package | Official checker smoke, 1,051 benchmark runs, candidate submission zip |
-| Live Web Evidence Agent | Submit window locked | Source ledger, claim boundary, voice handoff, narrated demo |
-| Coexistence Impact Engine | Proof stage | Gemini proof, evidence ladder, claim-boundary checks |
-| Shiproom OS | Submitted | Launch packet, evidence ledger, Novus/Pendo proof |
-| Resilient AgentOps Gateway | Public demo | Routing, fallback, cost, risk, approval, handoff proof |
-| AgentOps Flight Recorder | Public demo | Splunk-ready event timeline and evidence trace |
-| AgentOps Case Control Room | Public demo | UiPath-style governed case and approval workflow |
-| Gemini Operations Navigator | Public demo | MCP-style tool trace, cost guardrail, human approval |
-| Human-AI Handoff Copilot | Public demo | Required-field handoff packet and resume proof |
-| Evidence-Locked DFIR Agent | Public demo | Evidence-cited incident claims and unsupported-claim blocking |
+| AI時代の投稿管理 | 提出済み | Devvitアプリ、Gemini方針案、日本語画面 |
+| 投資調査メモ作成 | 提出済み | 公開サイト、Gemini検証、音声つきデモ、Devpost |
+| 造船所パズル解き | 準備済み | 公式チェッカー確認、1,051回検証、提出zip |
+| Web調査の証拠整理 | 待機中 | 出典一覧、言える範囲、音声引き継ぎデモ |
+| AI共存の効果確認 | 検証中 | Gemini検証、証拠の段階、言える範囲 |
+| 公開準備OS | 提出済み | 公開準備セット、証拠一覧、Novus/Pendo確認 |
+| AI運用の入口 | 公開デモ | 経路、切り替え、費用、リスク、承認、引き継ぎ |
+| AI作業の記録 | 公開デモ | 作業の時系列、証拠、あとから追える記録 |
+| AI作業の案件管理 | 公開デモ | 案件管理、承認、引き継ぎ |
+| Gemini業務ナビ | 公開デモ | 道具の利用、費用、人間の承認 |
+| 人とAIの引き継ぎ補助 | 公開デモ | 引き継ぎ項目、再開しやすい記録 |
+| 証拠を見ながら事故調査 | 公開デモ | 証拠つきの説明、弱い断定のブロック |
 
-## Screenshot
+## スクリーンショット
 
-The verification script generates the latest full-page screenshot:
+検証スクリプトを動かすと、最新の全体画像が作られます。
 
 ```text
 media/portfolio-full.png
+media/portfolio-mobile.png
 ```
 
-![DD AI Product Portfolio](media/portfolio-full.png)
+![DD AI作品集](media/portfolio-full.png)
 
-## Language Support
+![DD AI作品集 モバイル表示](media/portfolio-mobile.png)
 
-The site includes a small language switch:
+## 言語切り替え
 
+画面右上から切り替えできます。
+
+- 日本語
 - English
-- Japanese
 
-It is intentionally lightweight. The project cards stay compact, while the most important framing text switches language.
+日本語では、専門用語をできるだけ減らして、何を見ればいいか分かる言葉にしています。
 
-## Run Locally
+## ローカルで見る
 
-Open `index.html` directly, or serve it with any local static server.
+`index.html` を直接開くか、簡単なローカルサーバーで見られます。
 
 ```bash
 python3 -m http.server 4177
 ```
 
-Then open:
+そのあと、ここを開きます。
 
 ```text
 http://127.0.0.1:4177/
 ```
 
-## Verify
+## 動作確認
 
 ```bash
 npm install
 npm run verify
 ```
 
-Expected result:
+期待する結果:
 
 ```text
 portfolio_verify_ok
 ```
 
-The verifier checks:
+検証では、次を確認します。
 
-- required product names are visible
-- at least 10 project cards exist
-- at least 10 screenshots load
-- Japanese mode works
-- the hackathon filter shows 6 cards and hides 6 cards
-- a fresh `media/portfolio-full.png` screenshot is generated
+- 作品名が表示される
+- 作品カードが10個以上ある
+- 画像が10枚以上読み込まれる
+- 日本語表示が動く
+- 英語表示へ切り替えられる
+- ハッカソン絞り込みが動く
+- 新しい `media/portfolio-full.png` が作られる
 
-Verify the production Vercel deployment:
+本番のVercelも確認できます。
 
 ```bash
 npm run verify:vercel
 ```
 
-Expected result:
+期待する結果:
 
 ```text
 portfolio_verify_ok url=https://ai-revenue-portfolio.vercel.app
 ```
 
-## Claim Boundary
+## 言える範囲
 
-This portfolio intentionally avoids inflated claims.
+この作品集では、大きく見せすぎる表現を避けています。
 
-It links to public apps, repositories, demos, screenshots, verifiers, and submission packages. If a product is submitted, queued, proof-stage, or not yet final-submitted, the site says so plainly.
+公開アプリ、GitHub、デモ、画像、検証コマンド、提出パッケージにつながるものだけを載せています。
 
-## Main Links
+提出済み、準備中、検証中などの状態も、分かる範囲でそのまま書いています。
 
-- GitHub profile: https://github.com/daideguchi
-- Primary Vercel site: https://ai-revenue-portfolio.vercel.app
-- GitHub Pages mirror: https://daideguchi.github.io/ai-revenue-portfolio/
-- Investor Diligence War Room: https://daideguchi.github.io/investor-diligence-war-room/
-- Shipyard Solver Lab: https://daideguchi.github.io/shipyard-solver-lab/
-- Live Web Evidence Agent: https://daideguchi.github.io/live-web-evidence-agent/
-- Coexistence Impact Engine: https://daideguchi.github.io/coexistence-impact-engine/
-- Coexistence Console: https://github.com/daideguchi/coexistence-console
+## 主なリンク
+
+- GitHubプロフィール: https://github.com/daideguchi
+- メインサイト: https://ai-revenue-portfolio.vercel.app
+- GitHub Pages版: https://daideguchi.github.io/ai-revenue-portfolio/
+- 投資調査メモ作成: https://daideguchi.github.io/investor-diligence-war-room/
+- 造船所パズル解き: https://daideguchi.github.io/shipyard-solver-lab/
+- Web調査の証拠整理: https://daideguchi.github.io/live-web-evidence-agent/
+- AI共存の効果確認: https://daideguchi.github.io/coexistence-impact-engine/
+- AI時代の投稿管理: https://github.com/daideguchi/coexistence-console

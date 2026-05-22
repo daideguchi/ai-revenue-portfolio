@@ -42,39 +42,29 @@ try {
   const page = await browser.newPage({ viewport: { width: 1440, height: 1200 } });
   await page.goto(targetUrl, { waitUntil: "networkidle" });
 
-  const requiredText = [
-    "Human decides. AI ships.",
-    "Coexistence Console",
-    "Investor Diligence War Room",
-    "Shipyard Solver Lab",
-    "Live Web Evidence Agent",
-    "Coexistence Impact Engine",
-    "AgentOps Flight Recorder",
-    "Evidence-Locked DFIR Agent"
+  const requiredJapaneseText = [
+    "AI作品集",
+    "人間が決める。",
+    "このページは、DDのAI作品を見る入口です。",
+    "まず全体を見る",
+    "公開ページを開く",
+    "確認できるものを見る",
+    "公開した作品",
+    "AI時代の投稿管理",
+    "投資調査メモ作成",
+    "造船所パズル解き",
+    "Web調査の証拠整理",
+    "AI共存の効果確認",
+    "AI作業の記録",
+    "証拠を見ながら事故調査"
   ];
 
-  for (const text of requiredText) {
+  for (const text of requiredJapaneseText) {
     const count = await page.getByText(text, { exact: false }).count();
     if (count === 0) {
-      throw new Error(`missing text: ${text}`);
+      throw new Error(`missing Japanese-first text: ${text}`);
     }
   }
-
-  const cardCount = await page.locator(".project-card").count();
-  if (cardCount < 10) {
-    throw new Error(`expected at least 10 project cards, got ${cardCount}`);
-  }
-
-  const imageCount = await page.locator(".project-card img").evaluateAll((images) =>
-    images.filter((image) => image.complete && image.naturalWidth > 0).length
-  );
-  if (imageCount < 10) {
-    throw new Error(`expected at least 10 loaded images, got ${imageCount}`);
-  }
-
-  await page.getByRole("button", { name: "日本語" }).click();
-  await page.getByText("人間が決める。", { exact: false }).waitFor();
-  await page.getByText("公開した作品", { exact: false }).waitFor();
 
   const japaneseText = await page.locator("body").innerText();
   const bannedJapaneseModeText = [
@@ -83,9 +73,12 @@ try {
     "Featured",
     "Shipped Products",
     "View products",
+    "Start here",
     "public product lanes",
     "working demos",
     "submitted Devpost project",
+    "First-time visitors",
+    "Choose by purpose",
     "Hackathon lanes",
     "Evidence-first",
     "Submitted",
@@ -104,6 +97,48 @@ try {
       throw new Error(`english text still visible in Japanese mode: ${text}`);
     }
   }
+
+  await page.getByRole("button", { name: "EN" }).click();
+
+  const requiredEnglishText = [
+    "Human decides. AI ships.",
+    "This page is the front door to DD's AI work.",
+    "Understand the whole picture",
+    "Open the live page",
+    "Check the proof",
+    "Shipped Products",
+    "Coexistence Console",
+    "Investor Diligence War Room",
+    "Shipyard Solver Lab",
+    "Live Web Evidence Agent",
+    "Coexistence Impact Engine",
+    "AgentOps Flight Recorder",
+    "Evidence-Locked DFIR Agent"
+  ];
+
+  for (const text of requiredEnglishText) {
+    const count = await page.getByText(text, { exact: false }).count();
+    if (count === 0) {
+      throw new Error(`missing English text: ${text}`);
+    }
+  }
+
+  const cardCount = await page.locator(".project-card").count();
+  if (cardCount < 10) {
+    throw new Error(`expected at least 10 project cards, got ${cardCount}`);
+  }
+
+  const imageCount = await page.locator(".project-card img").evaluateAll((images) =>
+    images.filter((image) => image.complete && image.naturalWidth > 0).length
+  );
+  if (imageCount < 10) {
+    throw new Error(`expected at least 10 loaded images, got ${imageCount}`);
+  }
+
+  await page.getByRole("button", { name: "日本語" }).click();
+  await page.getByText("人間が決める。", { exact: false }).waitFor();
+  await page.getByText("このページは、DDのAI作品を見る入口です。", { exact: false }).waitFor();
+  await page.getByText("公開した作品", { exact: false }).waitFor();
 
   await page.getByRole("button", { name: "ハッカソン" }).click();
   const filterState = await page.locator(".project-card").evaluateAll((projectCards) => ({
