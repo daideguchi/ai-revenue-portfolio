@@ -473,6 +473,19 @@ h3 {
   color: var(--muted);
 }
 
+.project-body .value-line {
+  margin: -2px 0 12px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.42;
+}
+
 .featured-card {
   grid-column: span 1;
 }
