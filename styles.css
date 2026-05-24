@@ -404,7 +404,37 @@ h3 {
 }
 
 .filter-row {
-  margin-bottom: 22px;
+  margin-bottom: 14px;
+}
+
+.status-legend {
+  display: grid;
+  gap: 10px 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 24px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.status-legend .legend-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.status-legend .legend-text {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+@media (max-width: 680px) {
+  .status-legend {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
 }
 
 .project-grid {

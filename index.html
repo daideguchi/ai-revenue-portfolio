@@ -179,6 +179,25 @@
           <button type="button" data-filter="evidence" data-i18n="filterEvidence" aria-pressed="false">証拠重視</button>
         </div>
 
+        <div class="status-legend" aria-label="状態の意味">
+          <span class="legend-item">
+            <span class="status submitted" data-i18n="statusSubmitted">提出済み</span>
+            <span class="legend-text" data-i18n="legendSubmitted">Devpostへ提出が完了している</span>
+          </span>
+          <span class="legend-item">
+            <span class="status ready" data-i18n="statusReadyShort">準備済み</span>
+            <span class="legend-text" data-i18n="legendReady">提出パッケージは完成、提出窓の開放を待つ</span>
+          </span>
+          <span class="legend-item">
+            <span class="status queued" data-i18n="statusQueuedShort">待機中</span>
+            <span class="legend-text" data-i18n="legendQueued">提出窓が開いたら提出する予定</span>
+          </span>
+          <span class="legend-item">
+            <span class="status proof" data-i18n="statusProof">検証中</span>
+            <span class="legend-text" data-i18n="legendProof">証拠を積み上げている段階で、最終提出はまだ</span>
+          </span>
+        </div>
+
         <div class="project-grid">
           <article class="project-card featured-card" data-category="hackathon evidence">
             <img src="media/coexistence-console-ja-policy.png" alt="Coexistence Console Japanese policy editor screenshot" loading="eager">
