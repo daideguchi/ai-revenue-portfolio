@@ -45,7 +45,7 @@ try {
   const requiredJapaneseText = [
     "AI作品集",
     "人間が決める。",
-    "このページは、DDのAI作品を見る入口です。",
+    "このページは、人間主導のAI作品を見る入口です。",
     "30秒レビュー手順",
     "忙しい人は、この順番で見てください。",
     "まず全体を見る",
@@ -104,7 +104,7 @@ try {
 
   const requiredEnglishText = [
     "Human decides. AI ships.",
-    "This page is the front door to DD's AI work.",
+    "This page is the front door to a human-led AI product portfolio.",
     "30-second review path",
     "If you are busy, review in this order.",
     "Understand the whole picture",
@@ -141,7 +141,7 @@ try {
 
   await page.getByRole("button", { name: "日本語" }).click();
   await page.getByText("人間が決める。", { exact: false }).waitFor();
-  await page.getByText("このページは、DDのAI作品を見る入口です。", { exact: false }).waitFor();
+  await page.getByText("このページは、人間主導のAI作品を見る入口です。", { exact: false }).waitFor();
   await page.getByText("公開した作品", { exact: false }).waitFor();
 
   await page.getByRole("button", { name: "ハッカソン" }).click();

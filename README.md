@@ -1,6 +1,6 @@
-# DD AI作品集
+# AI Product Portfolio
 
-DDがAIと一緒に作った公開作品をまとめた、メインの作品集です。
+人間主導でAIと一緒に作った公開作品をまとめた、メインの作品集です。
 
 作品、公開ページ、GitHub、提出状況、確認できる証拠を一か所に置いています。
 
@@ -26,7 +26,7 @@ https://github.com/daideguchi/ai-revenue-portfolio
 
 ## これは何か
 
-これは、DDがAIと何を作れるのかをすぐ見るための入口です。
+これは、人間が方針を決め、AIと一緒に何を作れるのかをすぐ見るための入口です。
 
 ページでは、次のことが分かります。
 
@@ -53,7 +53,7 @@ https://github.com/daideguchi/ai-revenue-portfolio
 
 忙しい人は、次の順番で見てください。
 
-1. 上の一言と作品カードで、DDが何を作れる人かを見る
+1. 上の一言と作品カードで、人間主導のAI制作フローが何を作れるかを見る
 2. 気になる作品の `公開サイト` を1つ開く
 3. GitHub、画像、デモ、検証コマンドで、作った証拠を見る
 4. `提出済み`、`準備済み`、`待機中`、`検証中` の違いを確認し、過大な主張をしていないか見る
@@ -100,9 +100,9 @@ media/portfolio-full.png
 media/portfolio-mobile.png
 ```
 
-![DD AI作品集](media/portfolio-full.png)
+![AI Product Portfolio](media/portfolio-full.png)
 
-![DD AI作品集 モバイル表示](media/portfolio-mobile.png)
+![AI Product Portfolio モバイル表示](media/portfolio-mobile.png)
 
 ## 言語切り替え
 
