@@ -73,7 +73,7 @@ AIには実務を進めさせる。ただし、証拠、ルール、人間の確
 
 ## 主な作品
 
-画面上では、特に見てほしい `主なハッカソン作品` を4本の流れとして見せています。
+画面上では、特に見てほしい `主なハッカソン作品` を5本の流れとして見せています。
 
 それ以外にも、AI運用や証拠管理の公開デモを合わせて載せています。
 
@@ -83,6 +83,7 @@ AIには実務を進めさせる。ただし、証拠、ルール、人間の確
 | 投資調査メモ作成 | 提出済み | 公開サイト、Gemini検証、音声つきデモ、Devpost |
 | 造船所パズル解き | 準備済み | 公式チェッカー確認、1,051回検証、提出zip |
 | Web調査の証拠整理 | 待機中 | 出典一覧、言える範囲、音声引き継ぎデモ |
+| ドメインルーレット事業案 | 準備済み | ドメイン比較、日本語画面、言える範囲 |
 | AI共存の効果確認 | 検証中 | Gemini検証、証拠の段階、言える範囲 |
 | 公開準備OS | 提出済み | 公開準備セット、証拠一覧、Novus/Pendo確認 |
 | AI運用の入口 | 公開デモ | 経路、切り替え、費用、リスク、承認、引き継ぎ |
@@ -144,8 +145,8 @@ portfolio_verify_ok
 検証では、次を確認します。
 
 - 作品名が表示される
-- 作品カードが10個以上ある
-- 画像が10枚以上読み込まれる
+- 作品カードが13個以上ある
+- 画像が13枚以上読み込まれる
 - 日本語表示が動く
 - 英語表示へ切り替えられる
 - ハッカソン絞り込みが動く
@@ -179,5 +180,6 @@ portfolio_verify_ok url=https://ai-revenue-portfolio.vercel.app
 - 投資調査メモ作成: https://daideguchi.github.io/investor-diligence-war-room/
 - 造船所パズル解き: https://daideguchi.github.io/shipyard-solver-lab/
 - Web調査の証拠整理: https://daideguchi.github.io/live-web-evidence-agent/
+- ドメインルーレット事業案: https://daideguchi.github.io/domain-roulette-launch-lab/
 - AI共存の効果確認: https://daideguchi.github.io/coexistence-impact-engine/
 - AI時代の投稿管理: https://github.com/daideguchi/coexistence-console

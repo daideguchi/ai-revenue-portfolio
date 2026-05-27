@@ -56,6 +56,7 @@ try {
     "投資調査メモ作成",
     "造船所パズル解き",
     "Web調査の証拠整理",
+    "ドメインルーレット事業案",
     "AI共存の効果確認",
     "AI作業の記録",
     "証拠を見ながら事故調査"
@@ -115,6 +116,7 @@ try {
     "Investor Diligence War Room",
     "Shipyard Solver Lab",
     "Live Web Evidence Agent",
+    "Domain Roulette Launch Lab",
     "Coexistence Impact Engine",
     "AgentOps Flight Recorder",
     "Evidence-Locked DFIR Agent"
@@ -128,15 +130,15 @@ try {
   }
 
   const cardCount = await page.locator(".project-card").count();
-  if (cardCount < 10) {
-    throw new Error(`expected at least 10 project cards, got ${cardCount}`);
+  if (cardCount < 13) {
+    throw new Error(`expected at least 13 project cards, got ${cardCount}`);
   }
 
   const imageCount = await page.locator(".project-card img").evaluateAll((images) =>
     images.filter((image) => image.complete && image.naturalWidth > 0).length
   );
-  if (imageCount < 10) {
-    throw new Error(`expected at least 10 loaded images, got ${imageCount}`);
+  if (imageCount < 13) {
+    throw new Error(`expected at least 13 loaded images, got ${imageCount}`);
   }
 
   await page.getByRole("button", { name: "日本語" }).click();
@@ -149,13 +151,17 @@ try {
     visible: projectCards.filter((card) => !card.hidden).length,
     hidden: projectCards.filter((card) => card.hidden).length
   }));
-  if (filterState.visible !== 6 || filterState.hidden !== 6) {
-    throw new Error(`expected hackathon filter to show 6 and hide 6, got ${JSON.stringify(filterState)}`);
+  if (filterState.visible !== 7 || filterState.hidden !== 6) {
+    throw new Error(`expected hackathon filter to show 7 and hide 6, got ${JSON.stringify(filterState)}`);
   }
 
   await page.getByRole("button", { name: "すべて" }).click();
   const screenshotName = externalUrl ? "portfolio-vercel-full.png" : "portfolio-full.png";
   await page.screenshot({ path: join(root, "media", screenshotName), fullPage: true });
+  if (!externalUrl) {
+    await page.setViewportSize({ width: 390, height: 1200 });
+    await page.screenshot({ path: join(root, "media", "portfolio-mobile.png"), fullPage: true });
+  }
   console.log(`portfolio_verify_ok url=${targetUrl} cards=${cardCount} loaded_images=${imageCount} screenshot=media/${screenshotName}`);
 } finally {
   await browser.close();
